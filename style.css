@@ -1,0 +1,516 @@
+:root {
+  /* VARIABLES DE THÈME CLAIR RETABLIES */
+  --bg: #f7f7f7;        /* Fond très clair */
+  --card: #ffffff;      /* Fond de carte blanc */
+  --text: #111216;      /* Texte très foncé */
+  --muted: #6c757d;     /* Texte gris moyen */
+  --brand: #960505;     /* Bleu Vif */
+  --accent: #00d68f;    /* Vert Vif */
+  --border: #dee2e6;    /* Bordures gris très clair */
+  --shadow: 0 4px 12px rgba(0,0,0,0.1); /* Ombre légère pour thème clair */
+  
+  --radius: 18px;
+  --maxw: 1200px;
+  --space: 1rem;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: var(--bg); /* Fond CLAIR */
+  color: var(--text); /* Texte FONCÉ */
+  line-height: 1.6;
+}
+a { color: var(--brand); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.container { max-width: var(--maxw); margin: auto; padding: 0 var(--space); }
+
+/* Accessibilité */
+.skip-link { position: absolute; left: -9999px; }
+.skip-link:focus { 
+    position: static; 
+    background: var(--brand); 
+    color: var(--card); /* Texte clair sur CTA bleu */
+    padding: .5rem; 
+    border-radius: 4px; 
+    z-index: 101; 
+}
+
+/* ----------------------------------
+   NAVIGATION & HEADER (THÈME CLAIR)
+   ---------------------------------- */
+header {
+  background: var(--card); /* Fond BLANC */
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.nav { display: flex; justify-content: space-between; align-items: center; padding: .75rem 0; }
+.brand { display: flex; gap: .5rem; align-items: center; font-weight: 700; color: var(--text); } /* Texte FONCÉ */
+.logo { align-content: center;; width: 32px; height: 32px; border-radius: 8px; background: rgb(197, 16, 25); }
+
+/* Navigation */
+#nav-menu { display: flex; gap: 1rem; align-items: center; }
+#nav-menu a { padding: .5rem .8rem; border-radius: 999px; color: var(--text); } /* Texte FONCÉ */
+#nav-menu a.active, #nav-menu a.cta { 
+    background: var(--brand); 
+    color: var(--card); /* Texte CLAIR sur CTA */
+    font-weight: bold; 
+}
+#nav-menu a.cta:hover { background: #ae1928; }
+
+/* Menu mobile */
+.nav-toggle { display: none; }
+.nav-toggle-label { display: none; font-size: 1.5rem; color: var(--text); cursor: pointer; }
+@media (max-width: 768px) {
+  .nav { flex-wrap: wrap; }
+  #nav-menu { 
+    display: none; 
+    flex-direction: column; 
+    background: var(--card); 
+    padding: 1rem; 
+    border-radius: var(--radius); 
+    width: 100%; 
+    margin-top: 1rem;
+    border: 1px solid var(--border);
+  }
+  .nav-toggle:checked + .nav-toggle-label + #nav-menu { display: flex; }
+  .nav-toggle-label { display: block; }
+  #nav-menu a { width: 100%; text-align: center; }
+}
+
+/* ----------------------------------
+   SECTIONS & CARTES (THÈME CLAIR)
+   ---------------------------------- */
+section { padding: 2rem 0; }
+.hero { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+.hero .card { 
+    background: var(--card); /* Fond BLANC */
+    padding: 1rem; 
+    border-radius: var(--radius); 
+    box-shadow: var(--shadow); /* Ombre CLAIRE */
+    border: 1px solid var(--border);
+}
+.hero h1 { margin-top: 0; }
+@media (max-width: 768px) { .hero { grid-template-columns: 1fr; } }
+
+.grid { display: grid; gap: 1rem; }
+.cards-4 { grid-template-columns: repeat(4, 1fr); }
+.cards-3 { grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 900px) {
+  .cards-4 { grid-template-columns: repeat(2, 1fr); }
+  .cards-3 { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .cards-4, .cards-3 { grid-template-columns: 1fr; }
+}
+
+.product-layout { 
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 1rem; 
+    margin-top: 3rem;
+}
+.product-gallery { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 1rem; 
+    border-radius: var(--radius); 
+    overflow: hidden; 
+    box-shadow: var(--shadow); 
+    border: 1px solid var(--border);
+}
+.product-gallery img { width: 100%; }
+
+.card { 
+    background: var(--card); 
+    border: 1px solid var(--border); 
+    border-radius: var(--radius); 
+    overflow: hidden; 
+    box-shadow: var(--shadow); 
+}
+.card img { width: 100%; display: flex; }
+.pad { padding: 1rem; }
+.price { font-weight: bold; color: var(--accent); }
+.badge { 
+    display: inline-block; 
+    background: var(--accent); 
+    color: var(--text); /* Texte foncé sur accent */
+    padding: .2rem .6rem; 
+    border-radius: 999px; 
+    font-size: .8rem;
+    font-weight: bold;
+}
+
+/* ----------------------------------
+   PIED DE PAGE (THÈME CLAIR)
+   ---------------------------------- */
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul {
+    list-style: none;
+}
+
+/* footer qui non centrée */
+.footer {
+    background-color: white;
+    padding: 70px 0;
+    margin: 10px 0 0;
+    border-radius: 30px;
+}
+
+.footer-col {
+    width: 25%;
+    padding: 0 15px;
+}
+
+.footer-col h4 {
+    color: black;
+    font-size: 18px;
+    text-transform: capitalize;
+    margin-bottom: 25px;
+    margin-left: 20px;
+    font-weight: 500;
+    position: relative;
+}
+
+.footer-col h4::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #e91e63;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+.footer-col ul li:not(:last-child) {
+    margin-bottom: -10px;
+}
+
+.footer-col ul li a {
+    font-size: 16px;
+    text-transform: capitalize;
+    text-decoration: none;
+    font-weight: 300;
+    color: gray;
+    display: block;
+    transition: all 0.3s esae;
+}
+
+.footer-col ul li a:hover {
+    color: black;
+    padding-left: 8px;
+}
+
+.footer-col .social-links a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: black;
+    transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover {
+    color: #24262b;
+    background-color: gray;
+}
+
+/* ----------------------------------
+   STYLES DU FORMULAIRE (IMAGE + CONTRASTE)
+   ---------------------------------- */
+
+/* ... (Début du fichier, incluant les variables de thème clair, inchangé) ... */
+
+
+/* ----------------------------------
+   STYLES DU FORMULAIRE (IMAGE + CONTRASTE)
+   ---------------------------------- */
+
+.form {
+    /* Image de fond ajoutée par l'utilisateur */
+    background: url('https://cf.bstatic.com/xdata/images/hotel/max1024x768/227581204.jpg?k=bad6859b5756cd2fd9b1dfb5f29eab529042f2c4d6fc302c4c7761df27a4a47c&o=&hp=1') center/cover no-repeat;
+    padding: 50px 20px;
+    text-align: center;
+    position: relative; 
+    z-index: 0;
+  }
+  
+  /* Masque de contraste (Overlay) */
+  .form::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.65); /* 65% d'opacité noire pour le contraste */
+    z-index: 1; 
+  }
+
+  /* Titres et paragraphes du conteneur .form (au-dessus du masque) */
+  .form h1, .form p {
+    margin: 0;
+    font-size: 30px;
+    letter-spacing: 1px;
+    position: relative;
+    z-index: 2; 
+    color: #fff; /* Texte blanc sur fond sombre garanti */
+  }
+  
+  .form p {
+    margin: 10px 0 0;
+    font-size: 14px;
+    color: #f2f2f2;
+  }
+
+   .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    /* FIX CONTRASTE: La couleur est gérée par le sélecteur 'label' ci-dessous pour forcer le blanc */
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    /* Suppression du 'color: var(--text);' pour éviter le conflit */
+    text-transform: unset;
+  }
+  
+  .form-group-row {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .form-group-row .form-group {
+    flex: 1;
+  }
+
+ #contact-form {
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+    background: rgba(17, 18, 22, 0.85); 
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+    position: relative;
+    z-index: 2; 
+ }
+ 
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    font-size: 14px;
+    background: #fff; /* Fond clair pour les inputs */
+    color: #000; /* Texte noir sur fond clair */
+  }
+ 
+  .required {
+    color: red;
+  }
+
+ label {
+    font-family: 'Asimovian', sans-serif;
+    color: #fff; /* FIX CONTRASTE: Maintien du BLANC pour tous les labels */
+    font-size:  20px;
+    display: block;
+    margin-bottom: 5px;
+ }
+
+  textarea {
+    resize: vertical;
+  }
+  
+  .form-submit {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .form-submit button {
+    padding: 10px 20px;
+    background-color: var(--brand); 
+    color: var(--card); 
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 999px;
+  }
+  
+  .form-submit .hint {
+    font-size: 12px;
+    color: var(--muted);
+  }
+  
+  .form-submit a {
+    color: var(--brand);
+    text-decoration: none;
+  }
+  .contact-container {
+    width: 400px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    overflow: hidden;
+  }
+
+  /* ----------------------------------
+   STYLES DU PANIER (CART PAGE)
+   ---------------------------------- */
+
+.cart-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Panier (2/3) et Résumé (1/3) */
+    gap: 2rem;
+    align-items: start;
+}
+
+@media (max-width: 900px) {
+    .cart-layout {
+        grid-template-columns: 1fr; /* Empilement sur mobile */
+    }
+}
+
+/* Style d'un article dans le panier */
+.cart-item {
+    display: grid;
+    grid-template-columns: 100px 1fr auto; /* Image, Détails, Prix */
+    gap: 1rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    align-items: center;
+}
+
+.cart-item img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
+    background: var(--bg); /* Fond clair pour les images */
+}
+
+.item-details h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+}
+
+.remove-btn {
+    background: none;
+    border: none;
+    color: var(--muted);
+    text-decoration: underline;
+    cursor: pointer;
+    padding: 0;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+/* Style du résumé de la commande */
+.cart-summary {
+    position: sticky;
+    top: 70px; /* Aligné sous le header sticky */
+}
+
+.summary-line {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
+}
+
+.summary-line.total {
+    font-size: 1.2rem;
+    padding-top: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.cart-summary hr {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 1rem 0;
+}
+
+.checkout-btn {
+    display: block;
+    text-align: center;
+    padding: 0.75rem 1.5rem;
+    background: var(--accent); /* Utilisez l'accent pour le CTA principal */
+    color: var(--text); /* Texte foncé sur CTA vert */
+    font-weight: bold;
+    border-radius: 999px;
+    margin-top: 1rem;
+    transition: background 0.2s;
+}
+
+.checkout-btn:hover {
+    background: #00e99e;
+    text-decoration: none;
+}
+
+/* Style spécifique du lien Panier dans la navigation */
+.cart-link {
+    background: var(--card);
+    border: 1px solid var(--border);
+    color: var(--text) !important;
+    padding: 0.5rem 0.8rem;
+    border-radius: 999px;
+    font-weight: 500;
+}
+.cart-link.active {
+    /* Style pour le lien Panier lorsque nous sommes sur la page Panier */
+    background: var(--brand);
+    color: var(--card) !important;
+    border-color: var(--brand);
+}
+
+/* AJOUTEZ CE BLOC À LA FIN DE style.css */
+
+.payment-options .radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+}
+
+.payment-options .radio-group label::before {
+    content: '';
+    width: 30px; /* Taille du logo simulé */
+    height: 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+/* Logos de paiement simulés (à remplacer par de vraies images si vous en avez) */
+.payment-options #carte + label::before {
+    background-image: url('data:image/svg+xml,...'); /* Simuler les cartes */
+    background-color: #333;
+}
+.payment-options #orange-money + label::before {
+    background-color: #ff7900; /* Couleur Orange Money */
+    border-color: #ff7900;
+}
+.payment-options #wave + label::before {
+    background-color: #00d68f; /* Couleur Wave (Accent) */
+    border-color: #00d68f;
+}
+

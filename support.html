@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Support Client - Sona-Shop</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <script src="https://js.hcaptcha.com/1.1/api.js" async defer></script>
+
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Aller au contenu principal</a>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="index.html">
+        <span class="logo">FS</span><span>Ferrer-Shop</span>
+      </a>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="nav-toggle-label" aria-label="Menu principal">☰</label>
+      <nav id="nav-menu">
+        <a href="index.html">Accueil</a>
+        <a href="categories/category-electronique.html">Électronique</a>
+        <a href="categories/category-mode.html">Mode</a>
+        <a href="categories/category-maison.html">Maison</a>
+        <a href="categories/category-sport.html">Sport</a>
+        <a href="panier.html"> 🛒 </a>
+        <a href="support.html" class="cta active">Support</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="container">
+    <section id="contact-form-section" class="form">
+      <h1>Support Client</h1>
+      <p>Besoin d'aide ? Veuillez remplir le formulaire ci-dessous pour nous contacter.</p>
+
+      <form id="contact-form" action="https://api.web3forms.com/submit" method="post">
+         <input type="hidden" name="access_key" value="d60220ab-cff5-4da2-8084-9da0adc7d4e7">
+        <div class="form-group-row">
+          <div class="form-group">
+            <label for="first-name">Prénom <span class="required">*</span></label>
+            <input type="text" id="first-name" name="Prénom" autocomplete="given-name" required aria-required="true">
+          </div>
+          <div class="form-group">
+            <label for="last-name">Nom <span class="required">*</span></label>
+            <input type="text" id="last-name" name="Nom" autocomplete="family-name" required aria-required="true">
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label for="email">Adresse Email <span class="required">*</span></label>
+          <input type="email" id="email" name="Adresse Email" autocomplete="email" required aria-required="true">
+        </div>
+
+        <div class="form-group">
+          <label for="subject">Objet du message <span class="required">*</span></label>
+          <input type="text" id="subject" name="subject" required aria-required="true">
+        </div>
+        
+        <div class="form-group">
+          <label for="message">Message <span class="required">*</span></label>
+          <textarea id="message" name="message" rows="6" required aria-required="true"></textarea>
+        </div>
+        <div class="form-group">
+          <input type="checkbox" id="recontact" name="recontact" />
+          <label for="recontact">J'accepte d'être recontacté ?</label>
+        </div>
+      <div class="h-captcha" data-sitekey="d432e6d6-fc0e-446c-b8c2-ead62ac8c08c"></div>
+      </div>
+        <div class="form-submit">
+          <button type="submit">Envoyer le message</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <iframe src="https://www.google.com/maps/embed?pb=www.supinfo" 
+          frameborder="0"
+          width="400"
+          height="350"
+          style="border: 0; margin-top:2rem; border-radius: 20px;" 
+          allowfullscreen="" 
+          aria-hidden="false" 
+          tabindex="0">
+    </iframe>
+
+  <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#content">About us</a></li>
+                        <li><a href="#content">Our services</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Get help</h4>
+                    <ul>
+                        <li><a href="support.html">Returns</a></li>
+                        <li><a href="panier.html">Payment options</a></li>
+                    </ul>
+                </div><div class="footer-col">
+                    <h4>Online shop</h4>
+                    <ul>
+                        <li><a href="categories/category-electronique.html">Electronique</a></li>
+                        <li><a href="categories/category-mode.html">Mode</a></li>
+                        <li><a href="categories/category-maison.html">Maison</a></li>
+                        <li><a href="categories/category-sport.html">Sport</a></li>
+                        <li><a href="support.html">Support</a></li>
+                    </ul>
+                </div><div class="footer-col">
+                    <h4>Follow us</h4>
+                    <div class="social-links">
+                        <a href=""> <i class="fab fa-facebook-f"></i> </a>
+                        <a href=""> <i class="fab fa-twitter"></i> </a>
+                        <a href=""> <i class="fab fa-instagram"></i> </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </footer>
+</body>
+</html>

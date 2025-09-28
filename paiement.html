@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Passer à la Caisse - Ferrer-Shop</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <a class="skip-link" href="#main-content">Aller au contenu principal</a>
+    <div class="container nav">
+      <a class="brand" href="index.html">
+        <span class="logo"></span><span>Ferrer-Shop</span>
+      </a>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="nav-toggle-label">☰</label>
+      <nav id="nav-menu">
+        <a href="index.html">Accueil</a>
+        <a href="caté.html">Électronique</a>
+        <a href="category-mode.html">Mode</a>
+        <a href="support.html" class="cta">Support</a>
+        <a href="panier.html" class="cart-link">🛒 Panier (2)</a> 
+      </nav>
+    </div>
+  </header>
+
+  <main id="content" class="container section">
+    <h1>Finaliser la Commande</h1>
+
+    <div class="checkout-layout">
+      
+      <form action="index.html" method="GET" class="card pad checkout-form">
+        
+        <h2>1. Adresse de Livraison</h2>
+        <div class="form-group-row">
+            <div class="form-group">
+                <label for="prenom">Prénom</label>
+                <input type="text" id="prenom" name="prenom" required>
+            </div>
+            <div class="form-group">
+                <label for="nom">Nom</label>
+                <input type="text" id="nom" name="nom" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="adresse">Adresse complète</label>
+            <input type="text" id="adresse" name="adresse" required>
+        </div>
+        <div class="form-group-row">
+            <div class="form-group">
+                <label for="ville">Ville</label>
+                <input type="text" id="ville" name="ville" required>
+            </div>
+            <div class="form-group" style="max-width: 150px;">
+                <label for="code-postal">Code Postal</label>
+                <input type="text" id="code-postal" name="code-postal" required>
+            </div>
+        </div>
+        
+        <hr>
+        
+        <h2>2. Méthode de Paiement</h2>
+        
+        <div class="payment-options">
+            
+            <div class="radio-group">
+                <input type="radio" id="carte" name="methode-paiement" value="carte" checked>
+                <label for="carte">Carte Bancaire (Visa/Mastercard)</label>
+            </div>
+            
+            <div class="radio-group">
+                <input type="radio" id="orange-money" name="methode-paiement" value="orange-money">
+                <label for="orange-money">Orange Money</label>
+            </div>
+            
+            <div class="radio-group">
+                <input type="radio" id="wave" name="methode-paiement" value="wave">
+                <label for="wave">Wave</label>
+            </div>
+            
+            <div class="radio-group">
+                <input type="radio" id="paypal" name="methode-paiement" value="paypal">
+                <label for="paypal">PayPal</label>
+            </div>
+            
+        </div>
+        
+        <div id="carte-details" class="card-details">
+            <div class="form-group">
+                <label for="numero-carte">Numéro de Carte</label>
+                <input type="text" id="numero-carte" placeholder="XXXX XXXX XXXX XXXX" required>
+            </div>
+            <div class="form-group-row">
+                <div class="form-group">
+                    <label for="date-exp">Date d'Expiration (MM/AA)</label>
+                    <input type="text" id="date-exp" placeholder="01/25" required>
+                </div>
+                <div class="form-group">
+                    <label for="cvv">CVV</label>
+                    <input type="text" id="cvv" placeholder="XXX" required style="max-width: 100px;">
+                </div>
+            </div>
+        </div>
+        
+        <hr>
+        
+        <button type="submit" class="cta checkout-btn finaliser">
+            Payer et Finaliser la Commande
+        </button>
+
+      </form>
+      
+      <div class="cart-summary">
+        <div class="card pad">
+          <h2>Résumé de la Commande</h2>
+          <p class="muted">Contenu du panier non affiché pour la démo, Total :</p>
+          <div class="summary-line total" style="margin-top: 2rem;">
+            <strong>Total Final :</strong>
+            <strong class="price">218,90 €</strong>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </main>
+
+  <footer>
+    <div class="container cols">
+      <div>
+        <strong>Sona-Shop</strong><br>
+        <small>Projet e-commerce HTML + CSS (démo)</small>
+        <p class="muted">Respect des bonnes pratiques d’accessibilité et responsive design.</p>
+      </div>
+      <div>
+        <a href="support.html">Support</a><br>
+        <a href="caté.html">Électronique</a><br>
+        <a href="category-mode.html">Mode</a>
+      </div>
+      <div>
+        <a href="category-maison.html">Maison</a><br>
+        <a href="category-sport.html">Sport</a>
+      </div>
+    </div>
+  </footer>
+  
+  <script src="script.js"></script> 
+</body>
+</html>

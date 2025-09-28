@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Votre Panier - Ferrer-Shop</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+<body>
+  <header>
+    <a class="skip-link" href="#main-content">Aller au contenu principal</a>   
+    <div class="container nav">
+      <a class="brand" href="index.html">
+        <span class="logo">FS</span><span>Ferrer-Shop</span>
+      </a>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="nav-toggle-label" aria-label="Menu principal">☰</label>
+      <nav id="nav-menu">
+        <a href="index.html" class="active">Accueil</a>
+        <a href="categories/category-electronique.html">Électronique</a>
+        <a href="categories/category-mode.html">Mode</a>
+        <a href="categories/category-maison.html">Maison</a>
+        <a href="categories/category-sport.html">Sport</a>
+        <a href="panier.html"> 🛒 </a>
+        <a href="support.html" class="support">Support</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content" class="container section">
+    <h1>Votre Panier</h1>
+
+    <div class="cart-layout">
+      <div class="cart-items">
+        <h2>Articles (2)</h2>
+        
+        <article class="cart-item card">
+          <img src="img/casque-aur.jpg" alt="Casque sans fil">
+          <div class="item-details">
+            <h3>Casque sans fil</h3>
+            <p class="muted">Couleur: Noir</p>
+            <p>Quantité: 1</p>
+            <button class="remove-btn" type="button">Supprimer</button>
+          </div>
+          <div class="item-price">
+            <p class="price">15.000 XOF</p>
+          </div>
+        </article>
+        
+        <article class="cart-item card">
+          <img src="img/montre.jpg" alt="Smartwatch">
+          <div class="item-details">
+            <h3>Montre connectée</h3>
+            <p class="muted">Taille: 44mm</p>
+            <p>Quantité: 1</p>
+            <button class="remove-btn" type="button">Supprimer</button>
+          </div>
+          <div class="item-price">
+            <p class="price">25.000 XOF</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="cart-summary">
+        <div class="card pad">
+          <h2>Résumé de la commande</h2>
+          <div class="summary-line">
+            <span>Sous-total (2 articles) :</span>
+            <span>40.000 XOF</span>
+          </div>
+          <div class="summary-line">
+            <span>Livraison :</span>
+            <span>2000 XOF</span>
+          </div>
+          <hr>
+          <div class="summary-line total">
+            <strong>Total :</strong>
+            <strong class="price">42.000 XOF</strong>
+          </div>
+          <a href="paiement.html" class="cta checkout-btn">Passer à la caisse</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#content">About us</a></li>
+                        <li><a href="#content">Our services</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Get help</h4>
+                    <ul>
+                        <li><a href="support.html">Returns</a></li>
+                        <li><a href="panier.html">Payment options</a></li>
+                    </ul>
+                </div><div class="footer-col">
+                    <h4>Online shop</h4>
+                    <ul>
+                        <li><a href="categories/category-electronique.html">Electronique</a></li>
+                        <li><a href="categories/category-mode.html">Mode</a></li>
+                        <li><a href="categories/category-maison.html">Maison</a></li>
+                        <li><a href="categories/category-sport.html">Sport</a></li>
+                        <li><a href="support.html">Support</a></li>
+                    </ul>
+                </div><div class="footer-col">
+                    <h4>Follow us</h4>
+                    <div class="social-links">
+                        <a href=""> <i class="fab fa-facebook-f"></i> </a>
+                        <a href=""> <i class="fab fa-twitter"></i> </a>
+                        <a href=""> <i class="fab fa-instagram"></i> </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </footer>
+</body>
+</html>
